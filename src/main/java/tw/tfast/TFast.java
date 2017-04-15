@@ -43,8 +43,8 @@ import com.avaje.ebean.config.ServerConfig;
  */
 public final class TFast{
     private static Server server;
-    private static TFast() {}
-    private static Server getServer() {
-        return server;
-    }
+        private static TFast() {}
+            private static Server getServer() {
+                return server;
+            }
 } 
