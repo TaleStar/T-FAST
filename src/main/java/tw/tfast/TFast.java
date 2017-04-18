@@ -47,4 +47,90 @@ public final class TFast{
             private static Server getServer() {
                 return server;
             }
+     public static void setServer(Server server) {
+        if (Bukkit.server != null) {
+            throw new UnsupportedOperationException("Cannot redefine singleton Server");
+        }
+        Bukkit.server = server;
+            server.getLogger().info("This server is running " + getName() + " version " + getVersion() + " (Implementing API version " + getBukkitVersion() + ")");
+        }
+    
+    /**
+     * getVersion()
+     */
+    public static String getVersion() {
+        return server.getVersion();
+    }
+
+    /**
+     * getBukkitVersion()
+     */
+    public static String getBukkitVersion() {
+        return server.getBukkitVersion();
+    }
+        /**
+     * getName()
+     */
+    public static String getName() {
+        return server.getName();
+    }
+    
+    /**
+     * _INVALID_getOnlinePlayers()
+     */
+    @Deprecated
+    public static Player[] _INVALID_getOnlinePlayers() {
+        return server._INVALID_getOnlinePlayers();
+    }
+
+    /**
+     * getOnlinePlayers()
+     */
+    public static Collection<? extends Player> getOnlinePlayers() {
+        return server.getOnlinePlayers();
+    }
+
+    /**
+     * getMaxPlayers()
+     */
+    public static int getMaxPlayers() {
+        return server.getMaxPlayers();
+    }
+
+    /**
+     * getPort()
+     */
+    public static int getPort() {
+        return server.getPort();
+    }
+
+    /**
+     * getViewDistance()
+     */
+    public static int getViewDistance() {
+        return server.getViewDistance();
+    }
+
+    /**
+     * getIp()
+     */
+    public static String getIp() {
+        return server.getIp();
+    }
+
+    /**
+     * getServerName()
+     */
+    public static String getServerName() {
+        return server.getServerName();
+    }
+
+    /**
+     * getServerId()
+     */
+    public static String getServerId() {
+        return server.getServerId();
+    }
+
+
 } 
